@@ -1,7 +1,15 @@
 {
   "name": "node-basic",
   "version": "0.0.0",
-  "private": true,
+  "bin": "bin/www",
+  "main": "src/app.js",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/hitalos/node-basic.git"
+  },
+  "keywords": ["node", "javascript", "express"],
+  "author": "Hítalo Silva <hitalos@gmail.com>",
+  "description": "Node basic project",
   "scripts": {
     "lint": "eslint bin/www src/",
     "start": "node ./bin/www"
