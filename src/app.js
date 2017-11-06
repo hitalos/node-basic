@@ -2,6 +2,7 @@ const compression = require('compression')
 const express = require('express')
 const bodyParser = require('body-parser')
 const helmet = require('helmet')
+const path = require('path')
 
 const routes = require('./routes')
 
@@ -11,7 +12,7 @@ app.use(helmet())
 app.use(compression())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(express.static('public'))
+app.use(express.static(path.resolve(__dirname, '../public')))
 
 app.use(routes)
 
